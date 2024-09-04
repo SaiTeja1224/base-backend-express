@@ -1,3 +1,7 @@
+# Base Backend
+
+    This is a starter kit for starting up any self serving backend service. It includes useful packages referenced below along with setup of express web server.
+
 # bun
 
 To install dependencies:
@@ -9,7 +13,5 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
-
-This project was created using `bun init` in bun v1.1.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
