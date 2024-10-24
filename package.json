@@ -3,8 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run index.ts",
-    "dev": "bun --watch run index.ts",
+    "dev": "bun --watch index.ts",
+    "build": "bun build index.ts --target bun --outdir ./dist",
+    "start": "NODE_ENV=production bun dist/index.js",
     "lint": "bun run eslint .",
     "format": "bun run prettier --write .",
     "test": "bun test"
@@ -22,6 +23,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
+    "moment-timezone": "^0.5.46",
     "morgan": "^1.10.0",
     "winston": "^3.14.2",
     "zod": "^3.23.8"

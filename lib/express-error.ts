@@ -7,10 +7,12 @@
 export default class ExpressError extends Error {
   statusCode = 200;
   isOperational = false;
-  constructor(message: string, statusCode: number) {
+  data: any = {};
+  constructor(message: string, statusCode: number, data = {}) {
     super(message);
     this.statusCode = statusCode;
     this.isOperational = true;
+    this.data = data;
     Error.captureStackTrace(this, this.constructor);
   }
 }
